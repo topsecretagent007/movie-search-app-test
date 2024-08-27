@@ -1,5 +1,7 @@
 # Movie Search App
 
+<img align="center" width="800px" src="https://github.com/user-attachments/assets/92ec7762-3762-4f77-8296-35509a5700f3">
+
 ## Overview
 
 The Movie Search App allows users to search for movies using the TMDb (The Movie Database) API. The application displays a list of movies based on the user's query, allowing sorting by release date or rating. It supports pagination to navigate through multiple pages of search results.
