@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Movie Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Movie Search App allows users to search for movies using the TMDb (The Movie Database) API. The application displays a list of movies based on the user's query, allowing sorting by release date or rating. It supports pagination to navigate through multiple pages of search results.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+### Frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: A JavaScript library for building user interfaces. React is used to create reusable UI components and manage the state of the application.
+- **Tailwind CSS**: A utility-first CSS framework for creating responsive designs quickly. Tailwind CSS is used to style the application and ensure it is visually appealing across different devices.
+- **JavaScript ES6**: Modern JavaScript features are used throughout the codebase for cleaner and more efficient code.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### API
 
-### `npm test`
+- **TMDb API**: The Movie Database (TMDb) API is used to fetch movie data. This API provides movie details, including titles, release dates, ratings, and posters.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How It Works
 
-### `npm run build`
+### Components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **SearchBar**: 
+   - Allows users to enter a search query.
+   - On submitting the query, it triggers a search request to the TMDb API.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **MoviesTable**: 
+   - Displays a table of movie results.
+   - Includes sorting functionality by release date and rating.
+   - Shows movie details like poster, title, release date, rating, and description.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Pagination**:
+   - Manages navigation between pages of search results.
+   - Displays the current page number and total pages.
+   - Provides buttons to navigate to the next or previous page.
 
-### `npm run eject`
+### Functionality
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Searching**:
+   - Users enter a movie name into the search bar.
+   - The app sends a request to the TMDb API with the search query.
+   - Results are fetched and displayed in a paginated table.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Sorting**:
+   - Users can click on table headers to sort results by release date or rating.
+   - The table updates to reflect the selected sorting order.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Pagination**:
+   - The app calculates the total number of pages based on the total number of results and the number of movies displayed per page.
+   - Users can navigate between pages using "Next" and "Previous" buttons.
+   - The current page number and total pages are displayed to the user.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### API Integration
 
-## Learn More
+- **Base URL**: `https://api.themoviedb.org/3/search/movie`
+- **API Key**: `da128f0f40bdeb2660ba6801fe504117`
+- **Query Parameters**:
+  - `query`: The search term entered by the user.
+  - `page`: The current page number for pagination.
+  - `include_adult`: Set to `false` to exclude adult content.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Setup and Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clone the Repository**:
 
-### Code Splitting
+    ```bash
+    git clone https://github.com/yourusername/movie-search-app.git
+    cd movie-search-app
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Install Dependencies**:
 
-### Analyzing the Bundle Size
+    ```bash
+    npm install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Start the Development Server**:
 
-### Making a Progressive Web App
+    ```bash
+    npm start
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    The app will be accessible at `http://localhost:3000`.
 
-### Advanced Configuration
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. **Search for Movies**:
+   - Enter a movie name in the search bar and click "Search".
+   - Results will be displayed in a table.
 
-### Deployment
+2. **Sort Results**:
+   - Click on the "Release Date" or "Rating" column headers to sort the movies by those attributes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. **Navigate Pages**:
+   - Use the "Next" and "Previous" buttons to navigate through the pages of results.
 
-### `npm run build` fails to minify
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! Please fork the repository, make your changes, and create a pull request.
+
+## License
+
+This project is licensed under the MIT License. 
+
+---
+
+For any questions or issues, feel free to open an issue on GitHub or contact the project maintainers.
