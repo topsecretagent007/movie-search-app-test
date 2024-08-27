@@ -105,3 +105,5 @@ This project is licensed under the MIT License.
 ---
 
 For any questions or issues, feel free to open an issue on GitHub or contact the project maintainers.
+Email : lendonbracewell1114@gmail.com
+Telegram : lendon1114
