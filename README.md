@@ -64,7 +64,7 @@ The Movie Search App allows users to search for movies using the TMDb (The Movie
 1. **Clone the Repository**:
 
     ```bash
-    git clone https://github.com/yourusername/movie-search-app.git
+    git clone https://github.com/topsecretagent007/movie-search-app-test.git
     cd movie-search-app
     ```
 
