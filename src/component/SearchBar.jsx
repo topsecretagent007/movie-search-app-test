@@ -13,7 +13,7 @@ export default function SearchBar({ query, setQuery, fetchMovies, setCurrentPage
                 className="w-1/3 sm:w-1/2 rounded-full px-2 md:px-4 py-1 outline-none border-[2px] border-black font-semibold"
                 type="text"
                 name="query"
-                placeholder="search a movie"
+                placeholder="Search a movie"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />
